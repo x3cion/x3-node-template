@@ -1,0 +1,1 @@
+test("ts-jest works", () => {})

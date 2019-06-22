@@ -1,0 +1,7 @@
+.idea/
+.nyc_output/
+.vscode/
+coverage/
+src/
+jest.config.js
+tsconfig.json
