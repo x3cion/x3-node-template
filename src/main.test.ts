@@ -1,1 +1,1 @@
-test("ts-jest works", () => {})
+test("works", () => {});

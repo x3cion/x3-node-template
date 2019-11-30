@@ -1,35 +1,37 @@
 {
+	"compileOnSave": true,
 	"compilerOptions": {
-		"module": "commonjs",
-		"target": "es2018",
-		"moduleResolution": "node",
-		"sourceMap": true,
-		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true,
-		"removeComments": false,
-		"noImplicitAny": true,
-		"suppressExcessPropertyErrors": false,
-		"noImplicitThis": true,
-		"pretty": true,
-		"outDir": "dist",
-		"rootDir": "src",
-		"baseUrl": "src",
-		"paths": {
-			"*": [
-				"*"
-			]
-		},
-		"lib": [
-			"es2018"
-		],
-		"skipLibCheck": true,
-		"esModuleInterop": true
+	  "declaration": true,
+	  "declarationDir": "dist/",
+	  "emitDecoratorMetadata": true,
+	  "esModuleInterop": true,
+	  "experimentalDecorators": true,
+	  "lib": [
+		"es2018"
+	  ],
+	  "module": "commonjs",
+	  "moduleResolution": "node",
+	  "noImplicitAny": true,
+	  "noImplicitThis": true,
+	  "outDir": "dist",
+	  "pretty": true,
+	  "removeComments": false,
+	  "rootDir": "src",
+	  "sourceMap": true,
+	  "strict": true,
+	  "strictNullChecks": true,
+	  "suppressExcessPropertyErrors": false,
+	  "target": "es2018"
 	},
 	"include": [
-		"src/**/*"
+	  "src/**/*"
 	],
-	"exclude": [
-		"src/**/*.test.ts"
-	],
-	"compileOnSave": true
-}
+	"typedocOptions": {
+	  "exclude": [
+		"**/*.test.ts"
+	  ],
+	  "mode": "file",
+	  "out": "docs/typedoc",
+	  "theme": "markdown"
+	}
+  }

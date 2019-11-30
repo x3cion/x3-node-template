@@ -6,19 +6,44 @@
     "node": ">=12"
   },
   "main": "dist/main.js",
-  "scripts": {
-    "test": "jest --verbose"
+  "types": "./dist/main.d.ts",
+  "homepage": "https://github.com/x3cion/x3-node-template",
+  "bugs": {
+    "url": "https://github.com/x3cion/x3-node-template/issues"
   },
-  "author": "x3cion",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x3cion/x3-node-template.git"
+  },
+  "scripts": {
+    "full": "npm run lint && npm run build && npm run test && npm run doc",
+    "lint": "eslint .",
+    "test": "jest --coverage",
+    "build": "rimraf dist/ && tsc -p tsconfig.compile.json",
+    "watch": "rimraf dist/ && tsc -p tsconfig.compile.json -w",
+    "doc": "rimraf docs/typedoc && typedoc src/",
+    "prepublishOnly": "npm run full"
+  },
+  "author": {
+    "name": "Benno Dreißig",
+    "email": "x3@x3cion.net"
+  },
   "license": "MIT",
   "devDependencies": {
-    "@types/jest": "24.0.15",
-    "@types/node": "12.0.8",
-    "jest": "24.8.0",
-    "ts-jest": "24.0.2",
-    "tslint": "5.17.0",
-    "typescript": "3.5.2",
-    "rimraf": "2.6.3"
-  },
-  "dependencies": {}
+    "@types/jest": "24.0.*",
+    "@types/node": "12.*",
+    "@typescript-eslint/eslint-plugin": "2.9.*",
+    "@typescript-eslint/parser": "2.9.*",
+    "eslint": "6.6.0",
+    "eslint-config-prettier": "6.7.*",
+    "eslint-plugin-jest": "23.0.*",
+    "eslint-plugin-prettier": "3.1.*",
+    "jest": "24.9.0",
+    "prettier": "1.19.*",
+    "rimraf": "3.0.0",
+    "ts-jest": "24.2.*",
+    "typedoc": "0.15.*",
+    "typedoc-plugin-markdown": "2.2.*",
+    "typescript": "3.7.*"
+  }
 }

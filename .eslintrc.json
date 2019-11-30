@@ -1,0 +1,38 @@
+{
+  "extends": [
+		"eslint:recommended","plugin:@typescript-eslint/recommended", "plugin:prettier/recommended", "prettier/@typescript-eslint", "prettier/standard"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "ecmaVersion": 8
+  },
+  "plugins": ["prettier", "@typescript-eslint"],
+  "rules": {
+    "prettier/prettier": ["error", {
+      "printWidth": 150
+    }] 
+  },
+  "env": {
+    "es6": true
+  },
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "rules":{
+        "no-dupe-class-members":"off"
+      }
+    },
+    {
+      "files": ["{test,src}/**/*.test.ts"],
+      "plugins": ["jest"],
+      "env": {
+        "jest/globals": true
+      }
+    },
+    {
+      "files": ["*.js"],
+      "parser": "espree",
+      "env": {"node": true}
+    }
+  ]
+}
