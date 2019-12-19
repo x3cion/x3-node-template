@@ -3,4 +3,7 @@ description: 'Runs npm test within a docker container'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  entrypoint: [npm, run, test]
+  entrypoint: "npm"
+  args:
+    - run
+    - test
