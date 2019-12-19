@@ -2,7 +2,7 @@ name: 'Test in docker container'
 description: 'Runs npm test within a docker container'
 runs:
   using: 'docker'
-  image: "${{ runner.workspace }}/Dockerfile"
+  image: "$GITHUB_WORKSPACE/Dockerfile"
   entrypoint: "npm"
   args:
     - run
