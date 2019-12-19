@@ -1,8 +1,12 @@
 name: 'Test in docker container'
 description: 'Runs npm test within a docker container'
+inputs:
+  workspace:
+    description: 'Workspace directory'
+    required: true
 runs:
   using: 'docker'
-  image: "${{ GITHUB_WORKSPACE }}/Dockerfile"
+  image: "${{ inputs.workspace }}/Dockerfile"
   entrypoint: "npm"
   args:
     - run
