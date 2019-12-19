@@ -24,5 +24,5 @@ jobs:
       env:
         CI: true
     - name: Run test in docker container
+      uses: .github/actions/docker-test@7f1f449
       id: docker-test
-      uses: .github/actions/docker-test
