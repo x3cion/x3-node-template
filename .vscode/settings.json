@@ -1,7 +1,7 @@
 {
   "typescript.tsdk": "node_modules\\typescript\\lib",
-  "eslint.validate": [ "javascript", "javascriptreact", "typescript", "typescriptreact"],
   "eslint.enable": true,
+  "eslint.format.enable": true,
   "files.autoSave": "off",
   "editor.formatOnSave": false,
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
