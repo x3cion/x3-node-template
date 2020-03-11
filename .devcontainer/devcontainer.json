@@ -1,13 +1,13 @@
 // For format details, see https://aka.ms/vscode-remote/devcontainer.json or the definition README at
 // https://github.com/microsoft/vscode-dev-containers/tree/master/containers/docker-existing-dockerfile
 {
-	"name": "Existing Dockerfile",
-
+	"name": "Working Container",
+	
 	// Sets the run context to one level up instead of the .devcontainer folder.
 	"context": "..",
 
 	// Update the 'dockerFile' property if you aren't using the standard 'Dockerfile' filename.
-	"dockerFile": "..\\Dockerfile",
+	"dockerFile": "Dockerfile.devenv",
 
 	// The optional 'runArgs' property can be used to specify additional runtime arguments.
 	"runArgs": [
@@ -41,19 +41,9 @@
 	// Add the IDs of extensions you want installed when the container is created in the array below.
 	"extensions": [
 		"eamodio.gitlens",
-		"steoates.autoimport",
-		"iakimov.check-npm-updates",
 		"ms-azuretools.vscode-docker",
 		"dbaeumer.vscode-eslint",
-		"donjayamanne.githistory",
-		"eamodio.gitlens",
-		"wix.vscode-import-cost",
 		"orta.vscode-jest",
-		"fcrespo82.markdown-table-formatter",
-		"eg2.vscode-npm-script",
-		"zengxingxin.sort-js-object-keys",
-		"howardzuo.vscode-npm-dependency",
-		"herrmannplatz.npm-dependency-links",
-		"pmneo.tsimporter"
+		"xyz.local-history"
 	]
 }

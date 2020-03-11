@@ -7,7 +7,7 @@
 	  "esModuleInterop": true,
 	  "experimentalDecorators": true,
 	  "lib": [
-		"es2018"
+		"es2020"
 	  ],
 	  "module": "commonjs",
 	  "moduleResolution": "node",
@@ -21,17 +21,27 @@
 	  "strict": true,
 	  "strictNullChecks": true,
 	  "suppressExcessPropertyErrors": false,
-	  "target": "es2018"
+	  "target": "es2020"
 	},
 	"include": [
-	  "src/**/*"
+	  "**/*"
+	],
+	"exclude": ["**/tsconfig.json",
+		".devcontainer/",
+		".history/",
+		"coverage/",
+		"dist/",
+		"node_modules/",
+		"package-lock.json"
 	],
 	"typedocOptions": {
 	  "exclude": [
-		"**/*.test.ts"
+		"**/*.test.ts",
+		"test/**/*"
 	  ],
 	  "mode": "file",
 	  "out": "docs/typedoc",
-	  "theme": "markdown"
+	  "theme": "markdown",
+	  "readme": "none"
 	}
   }

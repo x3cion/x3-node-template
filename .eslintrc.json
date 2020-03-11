@@ -14,7 +14,7 @@
   },
   "env": {
     "es6": true,
-	"node": true
+	  "node": true
   },
   "overrides": [
     {
@@ -30,10 +30,22 @@
         "jest/globals": true
       }
     },
+    
     {
       "files": ["*.js"],
       "parser": "espree",
       "env": {"node": true}
+    },
+
+    {
+      "files": ["*.json"],
+      "parser": "espree",
+      "plugins": ["json-format"]
+    },
+
+    {
+      "files": ["*.md"],
+      "plugins": ["markdown"]
     }
   ]
 }

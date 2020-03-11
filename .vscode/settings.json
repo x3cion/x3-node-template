@@ -1,14 +1,15 @@
+
 {
   "typescript.tsdk": "node_modules\\typescript\\lib",
-  "eslint.validate": [
-    { "language": "javascript", "autoFix": true },
-    { "language": "javascriptreact", "autoFix": true },
-    { "language": "typescript", "autoFix": true },
-    { "language": "typescriptreact", "autoFix": true }
-  ],
   "eslint.enable": true,
+  "eslint.run": "onSave",
+  "eslint.format.enable": true,
+  "eslint.onIgnoredFiles": "warn",
+  "eslint.validate": ["typescript", "javascript", "json", "jsonc", "markdown"],
+  "eslint.probe": ["typescript", "javascript", "json", "markdown"],
   "files.autoSave": "off",
-  "eslint.autoFixOnSave": true,
-  "editor.formatOnSave": false,
-  "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.codeActionsOnSave": {
+     "source.fixAll.eslint": true
+  }
 }
