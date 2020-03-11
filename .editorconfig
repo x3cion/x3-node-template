@@ -1,6 +1,12 @@
 [*]
+indent_size = 4
+indent_style = tab
+
+[*.ts]
 end_of_line = lf
-insert_final_newline = true
+
+[*.js]
+end_of_line = lf
 
 [*.yml]
 indent_style = space

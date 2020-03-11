@@ -1,4 +1,7 @@
+**/tsconfig.json
+.devcontainer/
+.history/
+coverage/
 dist/
 node_modules/
-coverage/
-.vscode/
+package-lock.json
